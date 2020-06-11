@@ -16,7 +16,7 @@ def input_to_index(input)
 end
 
 def valid_move?(board, index)
-  if (board.any?{ |e| e.nil?} || board.any?{ |e| e.eql? ""} || !index.between?(0, 8))
+  if !(board.any?{ |e| e.nil?} || board.any?{ |e| e.eql? ""} || !index.between?(0, 8))
     !position_taken(board, index)
   end
 end
